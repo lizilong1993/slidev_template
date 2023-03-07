@@ -8,4 +8,4 @@ components.d.ts
 .vscode
 .idea
 pnpm-lock.yaml
-exports/*
+exports
