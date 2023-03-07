@@ -54,7 +54,7 @@ jobs:
           echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://guisso.dev/talks/${{ env.name }}/)|" >> README.md
 
       - name: Update README add Chinese Posts
-        if: ${{ contains(${{ env.lang }}, 'deploy:') }} # example: xxx.md
+        if: (!${{ contains(${{ env.lang }}, 'deploy:') }}) # example: xxx.md
         run: |
           echo "|${{ env.name }}|${{ env.time }}|CN|[link](https://guisso.dev/talks/${{ env.name }}/)|" >> README.md
 
