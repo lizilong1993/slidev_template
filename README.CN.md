@@ -1,4 +1,4 @@
-[EN](./README.md)
+语言 [EN](./README.md)|[CN](./README.CN.md)
 
 # 欢迎
 
