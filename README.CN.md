@@ -31,8 +31,9 @@ git push
 请在等待'Github Actions'执行完毕后去往仓库的'Settings->Pages->Build and deployment->Source'选择'Github Actions'。
 
 
-## Past talks
+## 最近的报告
 
-|Name|Presented at|Language|Slides Link|
-|-|-|-|-|
+|名称|时间|语言|链接|
+|:-:|:-:|:-:|:-|
 |slides|2023-03-07|CN|[link](https://lizilong1993.github.io/talks/slides/)|
+|slides|2023-03-07|EN|[link](https://lizilong1993.github.io/talks/slides/)|

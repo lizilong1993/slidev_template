@@ -51,7 +51,10 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Update README
-        run: echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.md
+        run: |
+          echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.md
+
+          echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.CN.md
 
       - name: Commit README changes
         uses: stefanzweifel/git-auto-commit-action@v4
