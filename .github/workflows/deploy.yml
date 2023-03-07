@@ -14,8 +14,8 @@ jobs:
 
       - name: Set env
         run: |
-          echo "name=$(echo '${{ github.event.head_commit.message }}' | cut -d ':' -f 2)" >> $GITHUB_ENV
-          echo "lang=$(echo '${{ github.event.head_commit.message }}' | cut -d '.' -f 2)" >> $GITHUB_ENV
+          echo "name=$(echo '${{ github.event.head_commit.message }}' | cut -d ':' -f 2 | cut -d '.' -f 1)" >> $GITHUB_ENV
+          echo "lang=$(echo '${{ github.event.head_commit.message }}' | cut -d '.' -f 2 | [:lower:] [:upper:])" >> $GITHUB_ENV
           time=$(date +"%Z %Y-%m-%d %A %H:%M:%S")
 
       - name: 安装 Node
@@ -49,12 +49,12 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Update README add Posts
-        if: ${{ env.lang }} != 'md' # example: xxx.EN.md
+        if: ${{ contains(${{ env.lang }}, 'deploy:') }} #example: xxx.en.md
         run: |
           echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://guisso.dev/talks/${{ env.name }}/)|" >> README.md
 
       - name: Update README add Chinese Posts
-        if: ${{ env.lang }} = 'md' # example: xxx.md
+        if: ${{ contains(${{ env.lang }}, 'deploy:') }} # example: xxx.md
         run: |
           echo "|${{ env.name }}|${{ env.time }}|CN|[link](https://guisso.dev/talks/${{ env.name }}/)|" >> README.md
 
