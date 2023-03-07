@@ -14,12 +14,9 @@ jobs:
 
       - name: Set env
         run: |
-          name=$(echo '${{ github.event.head_commit.message }}' | cut -d ':' -f 2 | cut -d '.' -f 1)  
-          lang=$(echo '${{ github.event.head_commit.message }}' | cut -d '.' -f 2 | tr a-z A-Z)
-          time=$(date +"%Z %Y-%m-%d %A %H:%M:%S")
-          echo '${{ env.name }}'
-          echo '${{ env.lang }}'
-          echo '${{ env.time }}'
+          echo "name=$(echo '${{ github.event.head_commit.message }}' | cut -d ':' -f 2 | cut -d '.' -f 1)" >> $GITHUB_ENV  
+          echo "lang=$(echo '${{ github.event.head_commit.message }}' | cut -d '.' -f 2 | tr a-z A-Z)" >> $GITHUB_ENV
+          echo "time=$(date +"%Z %Y-%m-%d %A %H:%M:%S")" >> $GITHUB_ENV
       - name: 安装 Node
         uses: actions/setup-node@v3
         with:
@@ -32,12 +29,13 @@ jobs:
           path: node_modules
           key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
 
-      - name: Install and Build 🔧
+      - name: Install Dependency
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          echo ${{ env.name }}
           npm install
-          npm run build -- ./slides/${{ env.name }}.md --base /talks/${{ env.name }}/
+
+      - name: Build Slides
+        run: npm run build -- ./slides/${{ env.name }}.md --base /talks/${{ env.name }}/
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
