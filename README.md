@@ -29,3 +29,4 @@ In the firts deploy you need to config github pages in Settings point to the `gh
 
 |Name|Presented at|Language|Slides Link|
 |-|-|-|-|
+|slides|2023-03-07|CN|[link](https://lizilong1993.github.io/talks/slides/)|
