@@ -17,7 +17,6 @@ jobs:
           echo "name=$(echo '${{ github.event.head_commit.message }}' | cut -d ':' -f 2 | cut -d '.' -f 1)" >> $GITHUB_ENV
           echo "lang=$(echo '${{ github.event.head_commit.message }}' | cut -d '.' -f 2 | tr a-z A-Z)" >> $GITHUB_ENV
           echo "time=$(date +"%Y-%m-%d")" >> $GITHUB_ENV
-
       - name: 安装 Node
         uses: actions/setup-node@v3
         with:
@@ -52,11 +51,11 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Update README CN
-        if: ${{ env.lang }} = 'deploy:${{ env.name }}'
-        run: echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.md
+        if: ${{ env.lang }} = *"DEPOLY:"*
+        run: echo "|${{ env.name }}|${{ env.time }}|CN|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.md
       - name: Update README
         if: (${{ env.lang }} != 'deploy:${{ env.name }}')
-        run: echo "|${{ env.name }}|${{ env.time }}|CN|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.md
+        run: echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.md
 
       - name: Commit README changes
         uses: stefanzweifel/git-auto-commit-action@v4
