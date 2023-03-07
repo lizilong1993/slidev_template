@@ -51,14 +51,12 @@ jobs:
       - name: Checkout for README 🛎️
         uses: actions/checkout@v3
 
+      - name: Update README CN
+        if: ${{ env.lang }} = 'deploy:${{ env.name }}'
+        run: echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.md
       - name: Update README
-        run: |
-          echo "${{ env.lang }}" | grep -q "deploy:"  
-          if [ $? -eq 0 ]; then
-              echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://guisso.dev/talks/${{ env.name }}/)|" >> README.md
-          else
-              echo "|${{ env.name }}|${{ env.time }}|CN|[link](https://guisso.dev/talks/${{ env.name }}/)|" >> README.md
-          fi
+        if: (${{ env.lang }} != 'deploy:${{ env.name }}')
+        run: echo "|${{ env.name }}|${{ env.time }}|CN|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.md
 
       - name: Commit README changes
         uses: stefanzweifel/git-auto-commit-action@v4
