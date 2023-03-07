@@ -31,3 +31,4 @@ Please wait the 'Github Actions' work complete， then go to your repository 'Se
 |Name|Presented at|Language|Slides Link|
 |-|-|-|-|
 |slides|2023-03-07|CN|[link](https://lizilong1993.github.io/talks/slides/)|
+|slides|2023-03-07|EN|[link](https://lizilong1993.github.io/talks/slides/)|
