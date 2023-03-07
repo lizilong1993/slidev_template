@@ -50,11 +50,7 @@ jobs:
       - name: Checkout for README 🛎️
         uses: actions/checkout@v3
 
-      - name: Update README CN
-        if: ${{ env.lang }} = *"DEPOLY:"*
-        run: echo "|${{ env.name }}|${{ env.time }}|CN|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.md
       - name: Update README
-        if: (${{ env.lang }} != 'deploy:${{ env.name }}')
         run: echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.md
 
       - name: Commit README changes
