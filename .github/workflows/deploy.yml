@@ -28,7 +28,7 @@ jobs:
         id: cache
         with:
           path: node_modules
-          key: ${{hashFiles('**/package-lock.json')}}
+          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
 
       - name: Install Dependency
         if: steps.cache.outputs.cache-hit != 'true'
