@@ -14,9 +14,9 @@ jobs:
 
       - name: Set env
         run: |
-          echo "name=$(echo '${{ github.event.head_commit.message }}' | cut -d ':' -f 2 | cut -d '.' -f 1)" 
-          echo "lang=$(echo '${{ github.event.head_commit.message }}' | cut -d '.' -f 2 | tr a-z A-Z)"
-          echo "time=$(date +"%Y-%m-%d")"
+          echo "name=$(echo '${{ github.event.head_commit.message }}' | cut -d ':' -f 2 | cut -d '.' -f 1)" >> $GITHUB_ENV
+          echo "lang=$(echo '${{ github.event.head_commit.message }}' | cut -d '.' -f 2 | tr a-z A-Z)" >> $GITHUB_ENV
+          echo "time=$(date +"%Y-%m-%d")" >> $GITHUB_ENV
 
       - name: 安装 Node
         uses: actions/setup-node@v3
