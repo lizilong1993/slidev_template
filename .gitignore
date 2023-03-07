@@ -7,5 +7,5 @@ index.html
 components.d.ts
 .vscode
 .idea
-pnpm-lock.yaml
+*-lock.yaml
 exports
