@@ -23,7 +23,7 @@ git commit -m "deploy: <slide-name>.cn" # please add suffixes ,it will display i
 git push
 ```
 
-In the firts deploy you need to config github pages in Settings point to the `gh-pages` branch.
+Please wait the 'Github Actions' work complete， then go to your repository 'Settings->Pages->Build and deployment->Source', and choose the item 'Github Actions'.
 
 ## Past talks
 
