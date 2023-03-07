@@ -17,6 +17,7 @@ jobs:
           echo "name=$(echo '${{ github.event.head_commit.message }}' | cut -d ':' -f 2 | cut -d '.' -f 1)" 
           echo "lang=$(echo '${{ github.event.head_commit.message }}' | cut -d '.' -f 2 | tr a-z A-Z)"
           echo "time=$(date +"%Y-%m-%d")"
+
       - name: 安装 Node
         uses: actions/setup-node@v3
         with:
@@ -27,7 +28,7 @@ jobs:
         id: cache
         with:
           path: node_modules
-          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+          key: ${{hashFiles('**/package-lock.json')}}
 
       - name: Install Dependency
         if: steps.cache.outputs.cache-hit != 'true'
