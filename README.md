@@ -18,7 +18,7 @@ Deploys are dispatched by commit messages:
 ```bash
 git add slides/<slide-name>.md
 
-git commit -m "deploy: <slide-name>"
+git commit -m "deploy: <slide-name>.cn" # please add suffixes ,it will display in the language collum of the table
 
 git push
 ```
