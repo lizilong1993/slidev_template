@@ -13,7 +13,7 @@ Special Thanks [fguisso/talks](https://github.com/fguisso/talks/)!
 Learn more about Slidev on [documentations](https://sli.dev/).
 
 ## Deploy in Github Pages
-
+> remenber to replace the infos with your own in the '.github\workflows\deploy.yml'. 
 Deploys are dispatched by commit messages:
 
 ```bash
@@ -28,7 +28,7 @@ Please wait the 'Github Actions' work complete， then go to your repository 'Se
 
 ## Past talks
 
-|Name|Presented at|Language|Slides Link|
-|-|-|-|-|
-|slides|2023-03-07|CN|[link](https://lizilong1993.github.io/talks/slides/)|
-|slides|2023-03-07|EN|[link](https://lizilong1993.github.io/talks/slides/)|
+|Name|Presented at|Language|Slides Link|PDF Link|
+|:-:|:-:|:-:|:-|:-|
+|slides|2023-03-07|CN|[link](https://lizilong1993.github.io/talks/slides/)||
+|slides|2023-03-07|EN|[link](https://lizilong1993.github.io/talks/slides/)||

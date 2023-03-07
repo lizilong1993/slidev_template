@@ -19,6 +19,7 @@
 请严格按照以下格式进行提交:
 > 'commit信息需要包含deploy' 和 '后缀（使用的语言）'；
 > 如不需要修改README.md 可以自行修改.'github\workflows\deploy.yml'
+> 别忘了把'.github\workflows\deploy.yml'里的相应信息改成你自己的。
 ```bash
 
 git add slides/<slide-name>.md
@@ -33,7 +34,7 @@ git push
 
 ## 最近的报告
 
-|名称|时间|语言|链接|
-|:-:|:-:|:-:|:-|
-|slides|2023-03-07|CN|[link](https://lizilong1993.github.io/talks/slides/)|
-|slides|2023-03-07|EN|[link](https://lizilong1993.github.io/talks/slides/)|
+|名称|时间|语言|链接|PDF|
+|:-:|:-:|:-:|:-|:-|
+|slides|2023-03-07|CN|[link](https://lizilong1993.github.io/talks/slides/)||
+|slides|2023-03-07|EN|[link](https://lizilong1993.github.io/talks/slides/)||

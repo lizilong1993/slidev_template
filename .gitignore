@@ -8,3 +8,4 @@ components.d.ts
 .vscode
 .idea
 exports
+*.pdf

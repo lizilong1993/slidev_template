@@ -34,10 +34,12 @@ jobs:
         run: |
           npm install
 
-      - name: Build Slides
+      - name: Build and Export Slides
         run: |
           echo "${{ env.name }}.md"
           npm run build -- ./slides/${{ env.name }}.md --base /talks/${{ env.name }}/
+          npm run export -- ./slides/${{ env.name }}.md
+          cp ${{ env.name }}-export.pdf ./exports/${{ env.name }}.pdf
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
@@ -52,9 +54,9 @@ jobs:
 
       - name: Update README
         run: |
-          echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.md
+          echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|[pdf](https://cdn.jsdelivr.net/gh/lizilong1993/talks@main/exports/${{ env.name }}.pdf)|" >> README.md
 
-          echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|" >> README.CN.md
+          echo "|${{ env.name }}|${{ env.time }}|${{ env.lang }}|[link](https://lizilong1993.github.io/talks/${{ env.name }}/)|[pdf](https://cdn.jsdelivr.net/gh/lizilong1993/talks@main/exports/${{ env.name }}.pdf)|" >>  README.CN.md
 
       - name: Commit README changes
         uses: stefanzweifel/git-auto-commit-action@v4
