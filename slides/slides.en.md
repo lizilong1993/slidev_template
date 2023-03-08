@@ -92,7 +92,6 @@ Here is another comment.
 -->
 
 ---
-
 transition: slide-up
 ---
 
@@ -118,7 +117,6 @@ Hover on the bottom-left corner to see the navigation's controls panel, [learn m
 <p v-after class="absolute bottom-23 left-45 opacity-30 transform -rotate-10">Here!</p>
 
 ---
-
 layout: image-right
 image: <https://source.unsplash.com/collection/94734566/1920x1080>
 ---
@@ -201,7 +199,6 @@ Also, HTML elements are valid:
 -->
 
 ---
-
 class: px-20
 ---
 
@@ -233,7 +230,6 @@ Read more about [How to use a theme](https://sli.dev/themes/use.html) and
 check out the [Awesome Themes Gallery](https://sli.dev/themes/gallery.html).
 
 ---
-
 preload: false
 ---
 
@@ -398,13 +394,11 @@ database "MySql" {
 [Learn More](https://sli.dev/guide/syntax.html#diagrams)
 
 ---
-
 src: ./pages/multiple-entries.md
 hide: false
 ---
 
 ---
-
 layout: center
 class: text-center
 ---
