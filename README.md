@@ -2,6 +2,7 @@ Language [EN](./README.md)|[CN](./README.CN.md)
 # Welcome to my talks
 
 This project is powered by [Sli.dev](https://sli.dev) + Github Actions + Github Pages.
+
 Special Thanks [fguisso/talks](https://github.com/fguisso/talks/)!
 
 ## Running for development

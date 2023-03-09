@@ -405,4 +405,3 @@ class: text-center
 
 [Documentations](https://sli.dev) · [GitHub](https://github.com/slidevjs/slidev) · [Showcases](https://sli.dev/showcases.html)
 background: 'https://lizilong.oss-cn-hangzhou.aliyuncs.com/typora/image-20230307194046509.png'
-
