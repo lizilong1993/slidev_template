@@ -38,7 +38,7 @@ jobs:
           echo "${{ env.name }}.md"
           npm run build -- ./slides/${{ env.name }}.md --base /slidev_template/${{ env.name }}/
           npm run export -- ./slides/${{ env.name }}.md
-          mv ${{ env.name }}-export.pdf ./exports/${{ env.name }}.pdf
+          mv ./${{ env.name }}-export.pdf ./exports/pdfs/${{ env.name }}.pdf
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
