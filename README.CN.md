@@ -8,8 +8,8 @@
 
 ## 安装环境
 
-- `pnpm install`
-- `pnpm run dev -- slides/my-slide.md`
+- `npm install`
+- `npm run dev -- slides/my-slide.md`
 - visit <http://localhost:3030>
 
 更多资料请前往官方文档自行查看 [documentations](https://sli.dev/).
