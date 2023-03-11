@@ -38,7 +38,11 @@ jobs:
           echo "${{ env.name }}.md"
           npm run build -- ./slides/${{ env.name }}.md --base /slidev_template/${{ env.name }}/
           npm run export -- ./slides/${{ env.name }}.md
-          mv ${{ env.name }}-export.pdf ./exports/${{ env.name }}.pdf
+
+      - name: Compression pdf
+        run: |
+          ./shrinkpdf.sh ${{ env.name }}-export.pdf > ${{ env.name }}.pdf
+          mv ${{ env.name }}.pdf ./exports/${{ env.name }}.pdf
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
@@ -52,20 +56,6 @@ jobs:
         run: |
           echo "|${{ env.name }}|${{ env.time }}|[https://lizilong1993.github.io/slidev_template/${{ env.name }}](https://lizilong1993.github.io/slidev_template/${{ env.name }}/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf)|" >> README.md 
           echo "|${{ env.name }}|${{ env.time }}|[https://lizilong1993.github.io/slidev_template/${{ env.name }}](https://lizilong1993.github.io/slidev_template/${{ env.name }}/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf)|" >>  README.CN.md
-          ls .
-          ls ./exports
-
-      # - name: Commit changes
-      #   uses: github-actions-x/commit@v2.9
-      #   with:
-      #     github-token: ${{ secrets.GITHUB_TOKEN }}
-      #     push-branch: "main"
-      #     commit-message: "update README && exports pdf"
-      #     files: ./exports/${{ env.name }}.pdf README.md README.CN.md
-      #     # force-add: 'true'
-      #     rebase: "true"
-      #     name: ${{ env.GITHUB_NAME }}
-      #     email: ${{ env.GITHUB_EMAIL }}
 
       - name: Commit changes
         uses: stefanzweifel/git-auto-commit-action@v4
