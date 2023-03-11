@@ -40,25 +40,6 @@ jobs:
           npm run export -- ./slides/${{ env.name }}.md
           mv ${{ env.name }}-export.pdf ./exports/${{ env.name }}.pdf
 
-      - name: Update README
-        run: |
-          echo "|${{ env.name }}|${{ env.time }}|[https://lizilong1993.github.io/slidev_template/${{ env.name }}](https://lizilong1993.github.io/slidev_template/${{ env.name }}/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf)|" >> README.md 
-          echo "|${{ env.name }}|${{ env.time }}|[https://lizilong1993.github.io/slidev_template/${{ env.name }}](https://lizilong1993.github.io/slidev_template/${{ env.name }}/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf)|" >>  README.CN.md
-          ls .
-          ls ./exports
-
-      - name: Commit changes
-        uses: github-actions-x/commit@v2.9
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          push-branch: "main"
-          commit-message: "update README && exports pdf"
-          files: ./exports/${{ env.name }}.pdf README.md README.CN.md
-          # force-add: 'true'
-          rebase: "true"
-          name: ${{ env.GITHUB_NAME }}
-          email: ${{ env.GITHUB_EMAIL }}
-
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
@@ -66,6 +47,33 @@ jobs:
           folder: slides/dist # The folder the action should deploy.
           target-folder: ${{ env.name }}
           clean: false
+
+      - name: Update README
+        run: |
+          echo "|${{ env.name }}|${{ env.time }}|[https://lizilong1993.github.io/slidev_template/${{ env.name }}](https://lizilong1993.github.io/slidev_template/${{ env.name }}/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf)|" >> README.md 
+          echo "|${{ env.name }}|${{ env.time }}|[https://lizilong1993.github.io/slidev_template/${{ env.name }}](https://lizilong1993.github.io/slidev_template/${{ env.name }}/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf)|" >>  README.CN.md
+          ls .
+          ls ./exports
+
+      # - name: Commit changes
+      #   uses: github-actions-x/commit@v2.9
+      #   with:
+      #     github-token: ${{ secrets.GITHUB_TOKEN }}
+      #     push-branch: "main"
+      #     commit-message: "update README && exports pdf"
+      #     files: ./exports/${{ env.name }}.pdf README.md README.CN.md
+      #     # force-add: 'true'
+      #     rebase: "true"
+      #     name: ${{ env.GITHUB_NAME }}
+      #     email: ${{ env.GITHUB_EMAIL }}
+
+      - name: Commit changes
+        uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Automated Change
+          branch: main
+          commit_options: "--no-verify --signoff"
+          file_pattern: "*.md ./exports/*.pdf"
 
       - name: Checkout for changes 🛎️
         uses: actions/checkout@v3
