@@ -1,3 +1,11 @@
+<style>
+table th {
+    border: none;
+}
+table {
+    width:100%;
+}
+</style>
 |||||
 |-|-|-|-:|
 |语言| [EN](./README.md)|[CN](./README.CN.md) |[![Build and Deploy](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml/badge.svg)](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml)|
@@ -39,7 +47,7 @@ git push
 ## 最近的报告
 
 |名称|时间|链接|PDF|
-|:-:|:-:|:-|:-:|
+|:-:|:-:|:-:|:-:|
 |slides.cn|2023-03-11|[https://lizilong1993.github.io/slidev_template/slides.cn](https://lizilong1993.github.io/slidev_template/slides.cn/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.cn.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.cn.pdf)|
 |slides.en|2023-03-11|[https://lizilong1993.github.io/slidev_template/slides.en](https://lizilong1993.github.io/slidev_template/slides.en/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.en.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.en.pdf)|
 |slides.fr|2023-03-11|[https://lizilong1993.github.io/slidev_template/slides.fr](https://lizilong1993.github.io/slidev_template/slides.fr/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.fr.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.fr.pdf)|
