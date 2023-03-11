@@ -8,8 +8,8 @@ Special Thanks [fguisso/talks](https://github.com/fguisso/talks/)!
 
 ## Running for development
 
-- `npm install`
-- `npm run dev -- slides/my-slide.md`
+- `pnpm install`
+- `pnpm run dev -- slides/my-slide.md`
 - visit <http://localhost:3030>
 
 Learn more about Slidev on [documentations](https://sli.dev/).

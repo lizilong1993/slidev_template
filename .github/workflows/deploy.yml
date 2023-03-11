@@ -31,14 +31,14 @@ jobs:
       - name: Install Dependency
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
-          npm install
-          apt-get install ghostscript libgs-dev
+          pnpm install
+          sudo apt-get install ghostscript libgs-dev
 
       - name: Build and Export Slides
         run: |
           echo "${{ env.name }}.md"
-          npm run build -- ./slides/${{ env.name }}.md --base /slidev_template/${{ env.name }}/
-          npm run export -- ./slides/${{ env.name }}.md
+          pnpm run build -- ./slides/${{ env.name }}.md --base /slidev_template/${{ env.name }}/
+          pnpm run export -- ./slides/${{ env.name }}.md
 
       - name: Compression pdf
         run: |
