@@ -31,6 +31,7 @@ jobs:
       - name: Install Dependency
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
+          npm install pnpm -g
           pnpm install
           sudo apt-get install ghostscript libgs-dev
 
