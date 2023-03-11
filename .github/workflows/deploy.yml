@@ -41,6 +41,7 @@ jobs:
 
       - name: Compression pdf
         run: |
+          chmod +x shrinkpdf.sh
           ./shrinkpdf.sh ${{ env.name }}-export.pdf > ${{ env.name }}.pdf
           mv ${{ env.name }}.pdf ./exports/${{ env.name }}.pdf
 
