@@ -26,13 +26,13 @@ jobs:
         id: cache
         with:
           path: node_modules
-          key: ${{runner.OS}}-${{hashFiles('**/package-lock.json')}}
+          key: ${{runner.OS}}-${{hashFiles('**/*-lock.json')}}
 
       - name: Install Dependency
         if: steps.cache.outputs.cache-hit != 'true'
         run: |
           npm install
-          npm install ghostscript4js --save
+          apt-get install ghostscript libgs-dev
 
       - name: Build and Export Slides
         run: |
@@ -42,6 +42,7 @@ jobs:
 
       - name: Compression pdf
         run: |
+
           chmod +x shrinkpdf.sh
           ./shrinkpdf.sh ${{ env.name }}-export.pdf > ${{ env.name }}.pdf
           mv ${{ env.name }}.pdf ./exports/${{ env.name }}.pdf
