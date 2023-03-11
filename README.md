@@ -1,4 +1,4 @@
-Language [EN](./README.md)|[CN](./README.CN.md)
+Language [EN](./README.md)|[CN](./README.CN.md) [![Build and Deploy](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml/badge.svg)](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml)
 # Welcome to my talks
 
 This project is powered by [Sli.dev](https://sli.dev) + Github Actions + Github Pages.
@@ -20,9 +20,10 @@ Deploys are dispatched by commit messages:
 ```bash
 git pull
 
-git add slides/<slide-name>.md
+# please add suffixes ,it will display in the language collum of the table
+git add slides/<slide-name>.en.md
 
-git commit -m "deploy: <slide-name>.en" # please add suffixes ,it will display in the language collum of the table
+git commit -m "deploy: <slide-name>.en" 
 
 git push
 ```

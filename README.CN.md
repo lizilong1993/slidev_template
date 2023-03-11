@@ -1,4 +1,4 @@
-语言 [EN](./README.md)|[CN](./README.CN.md)
+语言 [EN](./README.md)|[CN](./README.CN.md) [![Build and Deploy](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml/badge.svg)](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml)
 
 # 欢迎
 
@@ -23,9 +23,10 @@
 ```bash
 git pull 
 
-git add slides/<slide-name>.md
+# 文件必须带上后缀来标识语言哈
+git add slides/<slide-name>.cn.md
 
-git commit -m "deploy: <slide-name>.cn" # please add suffixes ,it will display in the language collum of the table
+git commit -m "deploy: <slide-name>.cn" 
 
 git push
 ```
