@@ -1,6 +1,6 @@
-<span align="right">[![Build and Deploy](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml/badge.svg)](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml)</span>
-
-Language [EN](./README.md)|[CN](./README.CN.md) 
+|||||
+|-|-|-|-:|
+|Language| [EN](./README.md)|[CN](./README.CN.md) |[![Build and Deploy](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml/badge.svg)](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml)|
 
 # Welcome to my talks
 
