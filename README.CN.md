@@ -39,3 +39,4 @@ git push
 |名称|时间|链接|PDF|
 |:-:|:-:|:-|:-:|
 |slides.cn|2023-03-11|[https://lizilong1993.github.io/slidev_template/slides.cn](https://lizilong1993.github.io/slidev_template/slides.cn/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.cn.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.cn.pdf)|
+|slides.en|2023-03-11|[https://lizilong1993.github.io/slidev_template/slides.en](https://lizilong1993.github.io/slidev_template/slides.en/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.en.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.en.pdf)|
