@@ -38,7 +38,7 @@ jobs:
           echo "${{ env.name }}.md"
           npm run build -- ./slides/${{ env.name }}.md --base /slidev_template/${{ env.name }}/
           npm run export -- ./slides/${{ env.name }}.md
-          mv ${{ env.name }}-export.pdf ./exports/${{ env.name }}.pdf
+          cp ${{ env.name }}-export.pdf ./exports/${{ env.name }}.pdf
           ls ./exports
           ls
       - name: Deploy 🚀
@@ -61,4 +61,4 @@ jobs:
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "readme: add ${{ env.name }} link"
-          file_pattern: "*.md"
+          file_pattern: "*.md *.pdf"
