@@ -56,7 +56,7 @@ jobs:
           echo "|${{ env.name }}|${{ env.time }}|[https://lizilong1993.github.io/slidev_template/${{ env.name }}](https://lizilong1993.github.io/slidev_template/${{ env.name }}/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf)|" >> README.md 
           echo "|${{ env.name }}|${{ env.time }}|[https://lizilong1993.github.io/slidev_template/${{ env.name }}](https://lizilong1993.github.io/slidev_template/${{ env.name }}/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf)|" >>  README.CN.md
           ls .
-          ls ./export
+          ls ./exports
 
       - name: Commit changes
         uses: github-actions-x/commit@v2.9
