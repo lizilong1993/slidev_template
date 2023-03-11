@@ -38,9 +38,18 @@ jobs:
           echo "${{ env.name }}.md"
           npm run build -- ./slides/${{ env.name }}.md --base /slidev_template/${{ env.name }}/
           npm run export -- ./slides/${{ env.name }}.md
-          cp ${{ env.name }}-export.pdf ./exports/${{ env.name }}.pdf
-          ls ./exports
-          ls
+          mv ${{ env.name }}-export.pdf ./exports/${{ env.name }}.pdf
+
+      - name: Push sqlite data # sqlite push
+        uses: github-actions-x/commit@v2.9
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          commit-message: "exports pdf"
+          files: ./exports/${{ env.name }}.pdf
+          rebase: "true"
+          name: ${{ env.GITHUB_NAME }}
+          email: ${{ env.GITHUB_EMAIL }}
+
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
@@ -57,8 +66,10 @@ jobs:
           echo "|${{ env.name }}|${{ env.time }}|[https://lizilong1993.github.io/slidev_template/${{ env.name }}](https://lizilong1993.github.io/slidev_template/${{ env.name }}/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf)|" >> README.md 
           echo "|${{ env.name }}|${{ env.time }}|[https://lizilong1993.github.io/slidev_template/${{ env.name }}](https://lizilong1993.github.io/slidev_template/${{ env.name }}/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf)|" >>  README.CN.md
 
-      - name: Commit README changes
+      - name: Commit READEME changes
         uses: stefanzweifel/git-auto-commit-action@v4
         with:
           commit_message: "add ${{ env.name }} link"
           file_pattern: "."
+
+      - name: Commit Export changes

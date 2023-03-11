@@ -21,6 +21,7 @@
 > 如不需要修改README.md 可以自行修改.'github\workflows\deploy.yml'
 > 别忘了把'.github\workflows\deploy.yml'里的相应信息改成你自己的。
 ```bash
+git pull 
 
 git add slides/<slide-name>.md
 

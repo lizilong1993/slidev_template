@@ -18,6 +18,8 @@ Learn more about Slidev on [documentations](https://sli.dev/).
 Deploys are dispatched by commit messages:
 
 ```bash
+git pull
+
 git add slides/<slide-name>.md
 
 git commit -m "deploy: <slide-name>.en" # please add suffixes ,it will display in the language collum of the table
