@@ -40,14 +40,6 @@ jobs:
           npm run export -- ./slides/${{ env.name }}.md
           mv ${{ env.name }}-export.pdf ./exports/${{ env.name }}.pdf
 
-      - name: Deploy 🚀
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: slides/dist # The folder the action should deploy.
-          target-folder: ${{ env.name }}
-          clean: false
-
       - name: Checkout for README 🛎️
         uses: actions/checkout@v3
 
@@ -69,3 +61,11 @@ jobs:
           rebase: "true"
           name: ${{ env.GITHUB_NAME }}
           email: ${{ env.GITHUB_EMAIL }}
+
+      - name: Deploy 🚀
+        uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages # The branch the action should deploy to.
+          folder: slides/dist # The folder the action should deploy.
+          target-folder: ${{ env.name }}
+          clean: false
