@@ -1,4 +1,4 @@
-Language [EN](./README.md)|[CN](./README.CN.md) [![Build and Deploy](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml/badge.svg)](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml)|
+Language [EN](./README.md)|[CN](./README.CN.md) [![Build and Deploy](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml/badge.svg)](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml)
 
 # Welcome to my talks
 
