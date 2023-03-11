@@ -20,7 +20,7 @@ Deploys are dispatched by commit messages:
 ```bash
 git add slides/<slide-name>.md
 
-git commit -m "deploy: <slide-name>.cn" # please add suffixes ,it will display in the language collum of the table
+git commit -m "deploy: <slide-name>.en" # please add suffixes ,it will display in the language collum of the table
 
 git push
 ```
@@ -29,8 +29,6 @@ Please wait the 'Github Actions' work complete， then go to your repository 'Se
 
 ## Past talks
 
-|Name|Presented at|Language|Slides Link|PDF Link|
-|:-:|:-:|:-:|:-|:-|
-|slides|2023-03-07|CN|[link](https://lizilong1993.github.io/slidev_template/slides/)|[PDF](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.pdf)|
-|slides|2023-03-07|EN|[link](https://lizilong1993.github.io/slidev_template/slides.en/)|[PDF](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.en.pdf)|
-|slides|2023-03-11|EN|[link](https://lizilong1993.github.io/talks/slides/)|[pdf](https://cdn.jsdelivr.net/gh/lizilong1993/talks@main/exports/slides.pdf)|
+|Name|Presented at||Slides Link|PDF Link|
+|:-:|:-:|:-:|:-|
+

@@ -34,7 +34,5 @@ git push
 
 ## 最近的报告
 
-|名称|时间|语言|链接|PDF|
-|:-:|:-:|:-:|:-|:-|
-|slides|2023-03-07|CN|[link](https://lizilong1993.github.io/talks/slides/)|[PDF](https://cdn.jsdelivr.net/gh/lizilong1993/talks@main/exports/slides.pdf)|
-|slides|2023-03-07|EN|[link](https://lizilong1993.github.io/talks/slides/)|[PDF](https://cdn.jsdelivr.net/gh/lizilong1993/talks@main/exports/slides.en.pdf)|
+|名称|时间|链接|PDF|
+|:-:|:-:|:-|:-|
