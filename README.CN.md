@@ -37,9 +37,5 @@ git push
 ## 最近的报告
 
 |名称|时间|链接|PDF|
-<<<<<<< HEAD
-|:-:|:-:|:-|:-|
-|slides.cn|2023-03-11|[https://lizilong1993.github.io/slidev_template/slides.cn](https://lizilong1993.github.io/slidev_template/slides.cn/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.cn.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.cn.pdf)|
-=======
 |:-:|:-:|:-|:-:|
->>>>>>> 198de58 (deploy:slides.en)
+|slides.cn|2023-03-11|[https://lizilong1993.github.io/slidev_template/slides.cn](https://lizilong1993.github.io/slidev_template/slides.cn/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.cn.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.cn.pdf)|
