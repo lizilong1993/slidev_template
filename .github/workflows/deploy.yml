@@ -40,9 +40,6 @@ jobs:
           npm run export -- ./slides/${{ env.name }}.md
           mv ${{ env.name }}-export.pdf ./exports/${{ env.name }}.pdf
 
-      - name: Checkout for README 🛎️
-        uses: actions/checkout@v3
-
       - name: Update README
         run: |
           echo "|${{ env.name }}|${{ env.time }}|[https://lizilong1993.github.io/slidev_template/${{ env.name }}](https://lizilong1993.github.io/slidev_template/${{ env.name }}/)|[https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/${{ env.name }}.pdf)|" >> README.md 
@@ -69,3 +66,6 @@ jobs:
           folder: slides/dist # The folder the action should deploy.
           target-folder: ${{ env.name }}
           clean: false
+
+      - name: Checkout for changes 🛎️
+        uses: actions/checkout@v3
