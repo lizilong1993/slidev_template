@@ -33,3 +33,4 @@ Please wait the 'Github Actions' work complete， then go to your repository 'Se
 |:-:|:-:|:-:|:-|:-|
 |slides|2023-03-07|CN|[link](https://lizilong1993.github.io/slidev_template/slides/)|[PDF](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.pdf)|
 |slides|2023-03-07|EN|[link](https://lizilong1993.github.io/slidev_template/slides.en/)|[PDF](https://cdn.jsdelivr.net/gh/lizilong1993/slidev_template@main/exports/slides.en.pdf)|
+|slides|2023-03-11|EN|[link](https://lizilong1993.github.io/talks/slides/)|[pdf](https://cdn.jsdelivr.net/gh/lizilong1993/talks@main/exports/slides.pdf)|
