@@ -13,7 +13,7 @@
     "slidev-theme-academic": "^1.1.1"
   },
   "devDependencies": {
-    "playwright-chromium": "^1.31.2",
-    "@jridgewell/sourcemap-codec": "^1.4.14"
+    "@jridgewell/sourcemap-codec": "^1.4.14",
+    "playwright-chromium": "^1.31.2"
   }
 }
