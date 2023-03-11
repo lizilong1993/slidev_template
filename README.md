@@ -1,4 +1,5 @@
-Language [EN](./README.md)|[CN](./README.CN.md) [![Build and Deploy](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml/badge.svg)](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml)
+Language [EN](./README.md)|[CN](./README.CN.md) <span align="right">[![Build and Deploy](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml/badge.svg)](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml)</span>
+
 # Welcome to my talks
 
 This project is powered by [Sli.dev](https://sli.dev) + Github Actions + Github Pages.
