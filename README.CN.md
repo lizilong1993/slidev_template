@@ -1,4 +1,6 @@
-语言 [EN](./README.md)|[CN](./README.CN.md) <span align="right">[![Build and Deploy](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml/badge.svg)](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml)</span>
+<span align="right">[![Build and Deploy](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml/badge.svg)](https://github.com/lizilong1993/slidev_template/actions/workflows/deploy.yml)</span>
+
+语言 [EN](./README.md)|[CN](./README.CN.md) 
 
 # 欢迎
 
